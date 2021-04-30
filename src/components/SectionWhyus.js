@@ -1,4 +1,6 @@
 import React from 'react'
+import WhyUsBlock from '../components/Whyus/WhyUsBlock'
+import WhyUsVideo from '../components/Whyus/WhyUsVideo'
 
 class SectionWhyus extends React.Component {
     constructor(props) {
@@ -7,29 +9,24 @@ class SectionWhyus extends React.Component {
   
     render() {
       return (
-        <section class="why-us section-bg" data-aos="fade-up" date-aos-delay="200">
-        <div class="container">
+        <section className="why-us section-bg" data-aos="fade-up" date-aos-delay="200">
+        <div className="container">
   
-        <div class="row">
-          <div class="col-lg-6 video-box">
-            <img src="assets/img/why-us.jpg" class="img-fluid" alt="" />
-            <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a>
-          </div>
+        <div className="row">
 
-          <div class="col-lg-6 d-flex flex-column justify-content-center p-5">
+          <WhyUsVideo imgsrc="./assets/img/why-us.jpg" videosrc="https://www.youtube.com/watch?v=jDDaplaOz7Q" />
 
-            <div class="icon-box">
-              <div class="icon"><i class="bx bx-fingerprint"></i></div>
-              <h4 class="title"><a href="">Lorem Ipsum</a></h4>
-              <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
-            </div>
+          <div className="col-lg-6 d-flex flex-column justify-content-center p-5">
 
-            <div class="icon-box">
-              <div class="icon"><i class="bx bx-gift"></i></div>
-              <h4 class="title"><a href="">Nemo Enim</a></h4>
-              <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
-            </div>
+              <WhyUsBlock usclass="bx bx-fingerprint" 
+                          title="Lorem Ipsum" 
+                          description="Voluptatum deleniti atque corrupti quos dolores et quas molestias 
+                                      excepturi sint occaecati cupiditate non provident" />
 
+              <WhyUsBlock usclass="bx bx-gift" 
+                          title="Nemo Enim" 
+                          description="At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium 
+                                      voluptatum deleniti atque" />
           </div>
         </div>
 
