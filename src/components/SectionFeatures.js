@@ -1,76 +1,54 @@
 import FeaturesTitle from '../components/Features/FeaturesTitle'
 import FeaturesUl from '../components/Features/FeaturesUl'
+import FeaturesImg from '../components/Features/FeaturesImg'
+import FeaturesText from '../components/Features/FeaturesText'
+import FeaturesData from '../components/Features/FeaturesData'
+
 import features from './data/features'
+import featurestext from './data/featurestext'
+import featuresdata from './data/featuresdata'
+import featurestitle from './data/featurestitle'
 
 function SectionFeatures(props) {
     return (
 
         <section className="features">
         <div className="container">
-
-          <FeaturesTitle head="Features" title="Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas." />
-  
-          <div className="row" data-aos="fade-up">
-            <div className="col-md-5">
-              <img src="./assets/img/features-1.svg" className="img-fluid" alt="" />
-            </div>
+          <FeaturesTitle head={featurestitle[0]} title={featurestitle[1]} />
+            <div className="row" data-aos="fade-up">
+            <FeaturesImg imgclass="col-md-5" imgsrc="./assets/img/features-1.svg" />
             <div className="col-md-7 pt-4">
-              <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h3>
-              <p className="font-italic">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                magna aliqua.
-              </p>
-               <FeaturesUl mapper={mapper(1)} />
+              <FeaturesText title={mapperfeaturetext(1)} />
+              <FeaturesUl mapper={mapper(1)} />
+              <FeaturesData title={featuresdata[0]} />
+            </div>
+          </div>
+  
+          <div className="row" data-aos="fade-up">
+            <FeaturesImg imgclass="col-md-5 order-1 order-md-2" imgsrc="./assets/img/features-2.svg" />
+            <div className="col-md-7 pt-5 order-2 order-md-1">
+              <FeaturesText title={mapperfeaturetext(2)} />
+              <FeaturesUl mapper={mapper(2)} />
+              <FeaturesData title={featuresdata[1]} />
 
             </div>
           </div>
   
           <div className="row" data-aos="fade-up">
-            <div className="col-md-5 order-1 order-md-2">
-              <img src="./assets/img/features-2.svg" className="img-fluid" alt="" />
-            </div>
-            <div className="col-md-7 pt-5 order-2 order-md-1">
-              <h3>Corporis temporibus maiores provident</h3>
-              <p className="font-italic">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                magna aliqua.
-              </p>
-              <p>
-                Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                culpa qui officia deserunt mollit anim id est laborum
-              </p>
-              <FeaturesUl mapper={mapper(2)} />
-            </div>
-          </div>
-  
-          <div className="row" data-aos="fade-up">
-            <div className="col-md-5">
-              <img src="./assets/img/features-3.svg" className="img-fluid" alt="" />
-            </div>
+            <FeaturesImg imgclass="col-md-5" imgsrc="./assets/img/features-3.svg" />
             <div className="col-md-7 pt-5">
-              <h3>Sunt consequatur ad ut est nulla consectetur reiciendis animi voluptas</h3>
-              <p>Cupiditate placeat cupiditate placeat est ipsam culpa. Delectus quia minima quod. Sunt saepe odit aut quia voluptatem hic voluptas dolor doloremque.</p>
+              <FeaturesText title={mapperfeaturetext(3)} />
               <FeaturesUl mapper={mapper(3)} />
+              <FeaturesData title={featuresdata[2]} />              
             </div>
           </div>
   
           <div className="row" data-aos="fade-up">
-            <div className="col-md-5 order-1 order-md-2">
-              <img src="./assets/img/features-4.svg" className="img-fluid" alt="" />
-            </div>
+            <FeaturesImg imgclass="col-md-5 order-1 order-md-2" imgsrc="./assets/img/features-4.svg" />            
             <div className="col-md-7 pt-5 order-2 order-md-1">
-              <h3>Quas et necessitatibus eaque impedit ipsum animi consequatur incidunt in</h3>
-              <p className="font-italic">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                magna aliqua.
-              </p>
-              <p>
-                Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                culpa qui officia deserunt mollit anim id est laborum
-              </p>
+              <FeaturesText title={mapperfeaturetext(4)} />
               <FeaturesUl mapper={mapper(4)} />
+              <FeaturesData title={featuresdata[3]} />              
             </div>
           </div>
   
@@ -85,6 +63,8 @@ function SectionFeatures(props) {
     return features.filter((el) => el.category == i )
   }
 
-
+  function mapperfeaturetext(i) {
+    return featurestext.filter((el) => el.category == i )[0]
+  }
 
   export default SectionFeatures
