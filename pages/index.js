@@ -13,7 +13,9 @@ class MainComponent extends React.Component {
   }
 
   componentDidMount() {
-    AOS.init();
+    AOS.init({easing: 'ease-in-out',
+              duration: 1000,
+              delay: 0});
   }
 
   render() {
