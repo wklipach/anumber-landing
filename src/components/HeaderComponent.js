@@ -8,7 +8,7 @@ class HeaderComponent extends React.Component {
   
     render() {
       return (
-        <header id="header" className="fixed-top d-flex align-items-center header-transparent">
+        <header id="header" className="fixed-top d-flex align-items-center header-transparent header-scrolled">
         <div className="container d-flex justify-content-between align-items-center">
           <div className="logo">
             <h1 className="text-light"><a href="index.html"><span>A-Number Software</span></a></h1>
