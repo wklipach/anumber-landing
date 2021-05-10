@@ -1,9 +1,9 @@
 const features = [
-    {category: '1', lititle: 'Ullamco laboris nisi ut aliquip ex ea commodo consequat2.'},
-    {category: '1', lititle: 'Duis aute irure dolor in reprehenderit in voluptate velit2.'},
-    {category: '3', lititle: 'Ullamco laboris nisi ut aliquip ex ea commodo consequat.'},
-    {category: '3', lititle: 'Duis aute irure dolor in reprehenderit in voluptate velit.'},
-    {category: '3', lititle: 'Facilis ut et voluptatem aperiam. Autem soluta ad fugiat.'}
+    {category: '1', lititle: '---features.js ----Ullamco laboris nisi ut aliquip ex ea commodo consequat2.---features.js ----'},
+    {category: '1', lititle: '---features.js ----Duis aute irure dolor in reprehenderit in voluptate velit2.---features.js ----'},
+    {category: '3', lititle: '---features.js ----Ullamco laboris nisi ut aliquip ex ea commodo consequat.---features.js ----'},
+    {category: '3', lititle: '---features.js ----Duis aute irure dolor in reprehenderit in voluptate velit.---features.js ----'},
+    {category: '3', lititle: '---features.js ----Facilis ut et voluptatem aperiam. Autem soluta ad fugiat.---features.js ----'}
 
   ];
 
