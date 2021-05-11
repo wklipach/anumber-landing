@@ -73,7 +73,7 @@ h1, h2, h3, h4, h5, h6, .font-primary {
 }
 #header .logo {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 #header .logo h1 {
   font-size: calc(20px + (24 - 20) * ((100vw - 320px) / (1360 - 320)));

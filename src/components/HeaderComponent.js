@@ -10,9 +10,11 @@ class HeaderComponent extends React.Component {
       return (
         <header id="header" className="fixed-top d-flex align-items-center header-transparent header-scrolled">
         <div className="container d-flex justify-content-between align-items-center">
+
+
           <div className="logo">
 
-              <img src="C:\Users\home\WebstormProjects\anumber-landing\public\assets\img\anumber_logo.png" className="logo" alt="Логотип"></img>
+              <img src="public/assets/img/anumber_logo.png" className="logo" alt="Логотип"></img>
 
             <h1 className="text-light"><a href="index.html"><span>A-Number Software</span></a></h1>
           </div>
