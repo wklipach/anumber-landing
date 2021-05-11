@@ -15,6 +15,8 @@ class MainComponent extends React.Component {
   componentDidMount() {
     AOS.init({easing: 'ease-in-out',
               duration: 1000,
+              once: true,
+              mirror: false,
               delay: 0});
   }
 
@@ -22,7 +24,7 @@ class MainComponent extends React.Component {
     return (
       <div>
         <HeadComponent /> 
-        <BodyComponent/> 
+        <BodyComponent onScroll={handleScroll} /> 
         <FooterComponent />
         <StickyComponent />
       </div> 
@@ -30,5 +32,9 @@ class MainComponent extends React.Component {
   }
 }
 
+function handleScroll(event) {
+
+  console.log('e=>', e);;
+}
 
 export default MainComponent
