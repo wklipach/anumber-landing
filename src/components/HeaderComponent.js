@@ -15,7 +15,7 @@ class HeaderComponent extends React.Component {
 
           <div className="logo">
 
-              <img src="public/assets/img/anumber_logo.png" className="logo" alt="Логотип"></img>
+              <img src="./assets/img/anumber_logo.png" className="logo" alt="Логотип"></img>
 
             <h1 className="text-light"><a href="index.html"><span>A-Number Software</span></a></h1>
           </div>
