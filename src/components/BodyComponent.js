@@ -7,23 +7,17 @@ class BodyComponent extends React.Component {
     constructor(props) {
       super(props);
     }
-  
+ 
     render() {
       return (
           <div>
-            <HeaderComponent />
+            <HeaderComponent headerscrolled = {this.props.headerscrolled} />
             <SectionTop />
             <MainComponent />            
           </div>  
       );
     }
   }
-  
+
+
   export default BodyComponent
-
-  /*
-  
-              <SectionTop />
-            <MainComponent />
-
-            */

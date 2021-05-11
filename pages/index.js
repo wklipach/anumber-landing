@@ -9,8 +9,8 @@ import "aos/dist/aos.css";
 class MainComponent extends React.Component {
   constructor(props) {
     super(props);
-  
-  }
+    this.state = { stickyvisible: false, headerscrolled: false };
+   }
 
   componentDidMount() {
     AOS.init({easing: 'ease-in-out',
@@ -18,23 +18,33 @@ class MainComponent extends React.Component {
               once: true,
               mirror: false,
               delay: 0});
+
+    window.addEventListener('scroll', this.handleScroll)              
   }
+
+
+   componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleScroll)
+   }
+
+  handleScroll = (e) => {
+        if (window.scrollY > 100) {
+          this.setState( { stickyvisible: true, headerscrolled: true });
+        } else {
+          this.setState( { stickyvisible: false, headerscrolled: false });
+        }
+  }
+
 
   render() {
     return (
       <div>
         <HeadComponent /> 
-        <BodyComponent onScroll={handleScroll} /> 
+        <BodyComponent headerscrolled = {this.state.headerscrolled}  /> 
         <FooterComponent />
-        <StickyComponent />
+        <StickyComponent visible={this.state.stickyvisible} />
       </div> 
     );
   }
 }
-
-function handleScroll(event) {
-
-  console.log('e=>', e);;
-}
-
 export default MainComponent

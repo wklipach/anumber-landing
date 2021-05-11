@@ -3,13 +3,21 @@ import MenuComponent from '../components/MenuComponent'
 
 class HeaderComponent extends React.Component {
     constructor(props) {
-      super(props);
-    }
-  
+          super(props);
+      }
+
     // header-scrolled
     render() {
+      let headerscrolled = "";
+      
+      if (this.props.headerscrolled == true) {
+          headerscrolled = "fixed-top d-flex align-items-center header-transparent header-scrolled";
+      } else {
+          headerscrolled = "fixed-top d-flex align-items-center header-transparent";
+      }
+
       return (
-        <header id="header" className="fixed-top d-flex align-items-center header-transparent">
+        <header id="header" className={headerscrolled}>
         <div className="container d-flex justify-content-between align-items-center">
 
 
