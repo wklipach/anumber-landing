@@ -12,7 +12,7 @@ import featurestitle from './data/featurestitle'
 function SectionFeatures(props) {
     return (
 
-        <section className="features">
+        <section className="features" id="features">
         <div className="container">
           <FeaturesTitle head={featurestitle[0]} title={featurestitle[1]} />
             <div className="row" data-aos="fade-up">

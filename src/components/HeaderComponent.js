@@ -10,6 +10,7 @@ class HeaderComponent extends React.Component {
     render() {
       let headerscrolled = "";
       
+      
       if (this.props.headerscrolled == true) {
           headerscrolled = "fixed-top d-flex align-items-center header-transparent header-scrolled";
       } else {
@@ -29,7 +30,7 @@ class HeaderComponent extends React.Component {
           </div>
     
           <nav id="navbar" className="navbar">
-            <MenuComponent />
+             <MenuComponent />
             <i className="bi bi-list mobile-nav-toggle"></i>
           </nav>
         </div>

@@ -8,7 +8,7 @@ class SectionServices extends React.Component {
 
     render() {
       return (
-        <section className="services">
+        <section className="services" id="SectionServices">
         <div className="container">
   
           <div className="row">
@@ -16,7 +16,7 @@ class SectionServices extends React.Component {
                             classDiv = "icon-box icon-box-pink" 
                             classI = "bx bxl-dribbble" 
                             title = "Lorem Ipsum"
-                            description = "Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident" />
+                            description = "!!!!!!Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident" />
   
             <QuardComponent delay = "100" 
                             classDiv = "icon-box icon-box-cyan" 
